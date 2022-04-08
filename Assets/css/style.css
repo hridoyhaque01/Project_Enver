@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    color:#fff !important;
+    background-color: var(--bg-clr);
+}
+
+/*============================== CREATE ROOT DIRECTORY======================== */
+:root{
+
+/*============================== ASSIGN ELEMENTS FONT SIZE ======================== */
+
+    --logo-text : 18px;
+    --extra-small-text : 13px;
+    --hero-title-text : 53px;
+    --small-text : 14px;
+    --title-text : 40px;
+    --service-item-text : 18px;
+
+/*============================== ASSIGN ELEMETNS COLOR ======================== */
+
+    --nav-link-active : #5454D4;
+    --clr : #fff;
+    --para-clr : rgba(255, 255, 255, 0.7);
+    --bg-clr : #19191B;
+}
+
+/*============================== COMMON WORK ======================== */
+
+
+.container{
+    width:95%;
+    margin:0 auto;
+}
+
+.grid{
+    display: grid;
+}
+
+.btn{
+    outline:none;
+    border:none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: var(--extra-small-text);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 0;
+}
+
+.btn1{
+    width:104px;
+    height: 30px;
+    border:1px solid #fff;
+    background-color: transparent;
+}
+
+.icon{
+    cursor: pointer;
+    font-size: 20px;
+    color:#fff;
+}
+
+.btn2{
+    width:135px;
+    height: 39px;
+    background-color: var(--nav-link-active);
+}
+
+.logo{
+    font-size: var(--logo-text);
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.hero_title{
+    font-size: var(--hero-title-text);
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.para{
+    font-size: var(--para-text);
+    color:var(--para-clr);
+    line-height: 26px;
+}
+
+.section_title{
+    font-size: var(--title-text);
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.sevice_title{
+    font-size: var(--service-item-text);
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    justify-content: space-between;
+}
+/*============================== END COMMON WORK ======================== */
+
+/*============================== DESIGN FOR NAVBAR ======================== */
+
+.navbar{
+    min-width: 100%;
+    padding:34px 0;
+}
+
+.logo-part a{
+   column-gap: 4px;
+}
+.navbar_items ul{
+    column-gap: 26px;
+}
+.navbar_items ul li a{
+    font-size: var(--small-text);
+    font-weight: 600;
+}
+
+.menu_btn{
+    position: fixed;
+    top:38px;
+    right:30px;
+    display: none;
+}
