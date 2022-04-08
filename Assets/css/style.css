@@ -11,7 +11,7 @@
 
 body{
     font-family: 'Nunito Sans', sans-serif;
-    color:#fff !important;
+    color:#fff ;
     background-color: var(--bg-clr);
 }
 
@@ -39,14 +39,21 @@ body{
 
 
 .container{
-    width:95%;
+    width:90%;
     margin:0 auto;
 }
 
+i{
+    line-height: 0;
+    display: inline-block;
+}
 .grid{
     display: grid;
 }
-
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
 .btn{
     outline:none;
     border:none;
@@ -119,29 +126,71 @@ body{
 .flex-between{
     justify-content: space-between;
 }
+
+section{
+    padding: 25px 0;
+}
 /*============================== END COMMON WORK ======================== */
 
 /*============================== DESIGN FOR NAVBAR ======================== */
 
 .navbar{
+    position: relative;
     min-width: 100%;
     padding:34px 0;
 }
 
 .logo-part a{
    column-gap: 4px;
+   color:#fff;
 }
+
 .navbar_items ul{
     column-gap: 26px;
 }
+
 .navbar_items ul li a{
     font-size: var(--small-text);
     font-weight: 600;
+    color:#fff;
+    text-transform: capitalize;
+    transition: .3s;
 }
+.navbar_items ul li a:hover,
+.navbar_items ul li a.active{
+    color:var(--nav-link-active);
+}
+
+.button form .btn1{
+    transition: .3s;
+}
+
+.button form .btn1:hover{
+    border-color:var(--nav-link-active);
+    background-color: var(--nav-link-active);
+}
+
 
 .menu_btn{
     position: fixed;
     top:38px;
     right:30px;
     display: none;
+}
+
+
+/*============================== DESIGN FOR NAVBAR ======================== */
+
+.hero_grid-content{
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+}
+
+.hero_btn i{
+    font-size: 20px;
+    margin-left: 4px;
+    transform: rotate(-18deg);
+}
+.hero_img-content .hero-img{
+    text-align: center;
 }
