@@ -112,7 +112,7 @@ i{
     line-height: 46px;
 }
 
-.sevice_title{
+.service_title{
     font-size: var(--service-item-text);
     font-weight: 600;
     line-height: 25px;
@@ -128,7 +128,7 @@ i{
 }
 
 section{
-    padding: 25px 0;
+    padding: 40px 0;
 }
 /*============================== END COMMON WORK ======================== */
 
@@ -178,14 +178,36 @@ section{
     display: none;
 }
 
-
 /*============================== DESIGN FOR NAVBAR ======================== */
 
 .hero_grid-content{
-    grid-template-columns: 1fr 1.8fr;
+    grid-template-columns: 1fr 1.2fr;
     align-items: center;
 }
-
+.hero_img-content{
+    position: relative;
+    text-align: center;
+}
+.hero_img-content .vector{
+    position: absolute;
+ 
+}
+.hero_img-content .vector1{
+    top:0;
+    left:90px;
+}
+.hero_img-content .vector2{
+    right:170px;
+    top:0;
+}
+.hero_img-content .vector3{
+    bottom:0;
+    left:0;
+}
+.hero_img-content .vector4{
+    bottom:0;
+    right:120px;
+}
 .hero_btn i{
     font-size: 20px;
     margin-left: 4px;
@@ -193,4 +215,84 @@ section{
 }
 .hero_img-content .hero-img{
     text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.hero-img::after{
+    position: absolute;
+    content: '';
+    top:115px;
+    left:65px;
+    height: 50%;
+    width:55%;
+    border:2px solid #fff;
+    border-radius: 20px;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+
+/*============================== DESIGN FOR NAVBAR ======================== */
+
+.about_grid{
+    grid-template-columns: 1fr 1fr;
+}
+.video-content{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid_bg-img{
+    position: relative;
+}
+.vid_bg-img .play_btn{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/*============================== DESIGN FOR NAVBAR ======================== */
+
+.service_title-grid{
+    grid-template-columns: .4fr;
+    justify-content: center;
+    text-align: center;
+}
+.service-content{
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 90px;
+    row-gap: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+.service-card{
+    padding:20px;
+}
+.service-card .service_title{
+    margin:10px 0;
+}
+/*============================== DESIGN FOR NAVBAR ======================== */
+.slider-content{
+    margin-top: 30px;
+}
+/* .portfolio-content{
+    padding:5px 120px;
+    height: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+.single-item.start{
+    align-self: flex-start;
+}
+.single-item.center{
+    align-self: center;
+}
+.single-item.baseline{
+    align-self: flex-end;
+} */
+.swiper-slide{
+    text-align: center;
+    /* padding:10px 30px;
+    display: flex;
+    justify-content: center; */
 }
