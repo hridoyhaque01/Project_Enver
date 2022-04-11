@@ -133,7 +133,7 @@ i{
 }
 
 section{
-    padding: 40px 0;
+    padding: 80px 0;
 }
 /*============================== END COMMON WORK ======================== */
 
@@ -147,7 +147,6 @@ section{
     padding:34px 0;
     z-index: 9999;
     transition: .4s;
-
 }
 
 .navbar.show_navbar{
@@ -188,16 +187,50 @@ section{
 }
 
 .menu_btn{
-    position: fixed;
-    top:38px;
-    right:30px;
     display: none;
 }
 
-/*============================== HERO SECTION DESIGN STYLE ======================== */
-.hero{
-    height: 100vh;
+.close_menu {
+    display: none;
 }
+/*============================== STYLING FOR MOBILE DEVICE ======================== */
+
+.navbar_items.mobile-menu{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(22, 24, 34, 0.7);
+    transition: .6s;
+    display: block;
+}
+.mobile-menu ul{
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: rgb(36, 35, 53);
+    margin:60px 120px;
+    padding:50px 20px 30px 20px;
+    border-radius: 5px;
+    position: relative;
+    transform: translateY(-30px);
+}
+
+.mobile-menu ul .close_menu{
+    display: inline-block;
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size: 1.3rem;
+    color: rgb(197, 46, 71);
+    cursor: pointer;
+}
+
+/*============================== HERO SECTION DESIGN STYLE ======================== */
+
+.hero{
+    padding-top:120px;
+} 
 
 .hero_grid-content{
     grid-template-columns: 1fr 1.2fr;
@@ -432,3 +465,43 @@ section{
 .footer-menu ul li a:hover{
     color:var(--nav-link-active);
 }
+
+/*============================== RESPONSE DESIGN ======================== */
+
+@media screen and (max-width : 1200px) {
+
+    .hero_img-content .vector2{
+        right:60px;
+        top:0;
+    }
+
+    .hero_img-content .vector4{
+        bottom:0;
+        right:30px;
+    }
+
+}
+
+@media screen and (max-width : 991px) {
+    
+}
+
+@media screen and (max-width : 767px) {
+    .hero_grid-content{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 40px;
+    }
+    .menu_btn{
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .navbar_items{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width : 5750px) {
+    
+}
+
