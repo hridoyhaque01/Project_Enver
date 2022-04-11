@@ -70,7 +70,7 @@
 
   $('.owl-carousel').owlCarousel({
       loop:true,
-      margin:50,
+      margin:30,
       responsiveClass:true,
       responsive:{
           0:{

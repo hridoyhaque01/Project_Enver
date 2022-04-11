@@ -44,7 +44,6 @@ body{
 .container{
     max-width:95%;
     margin:0 auto;
-    white-space: wrap;
 }
 
 i{
@@ -135,10 +134,8 @@ i{
 }
 
 section{
-    position: relative;
     padding: 80px 0;
     overflow: hidden;
-    
 }
 
 @media screen and (max-width:991px) {
@@ -493,6 +490,7 @@ section{
 .copyright p{
     font-size: var(--small-text);
     transition: .3s;
+    white-space: nowrap;
 }
 
 .footer-menu ul li a:hover{
@@ -548,8 +546,21 @@ section{
     .service-content{
         grid-template-columns: repeat(2,1fr);
     }
-    
-    
+    .footer_contents{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        row-gap: 20px;
+    }
+    .footer_contents .footer-logo{
+        justify-self: left;
+    }
+    .footer_contents .footer-menu{
+        justify-self: right;
+    }
+    .footer_contents .copyright{
+        justify-self: center;
+        grid-column: span 2;
+    }
 }
 
 @media screen and (max-width : 575px) {
@@ -576,11 +587,16 @@ section{
     .service-content{
         grid-template-columns: repeat(1,1fr);
     }
+    .footer_contents{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
     
 }
 @media screen and (max-width : 380px) {
     .section_title{
-        font-size: 28px;
+        font-size: 22px;
     }
 }
 
