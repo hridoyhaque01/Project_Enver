@@ -11,9 +11,9 @@
 
     <link rel="stylesheet" href="Assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="Assets/vendor/boxicons/css/boxicons.css">
-    <link rel="stylesheet" href="Assets/vendor/videopopup/css/videopopup.css">
     <link rel="stylesheet" href="Assets/vendor/glightbox/css/glightbox.min.css">
-    <link rel="stylesheet" href="Assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Assets/vendor/OwlCarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Assets/vendor/OwlCarousel/css/owl.theme.default.min.css">
 
     <!--================== IMPORT CSS FILES ======================= -->
 
@@ -22,21 +22,22 @@
 </head>
 <body>
     
+    <!--================== NAVBAR DESIGN ======================= -->
 
     <nav class="navbar" id="navbarId">
         <div class="container flex flex-between navbar_flex-content">
             <div class="logo-part">
-                <a href="" class="flex logo">
+                <a href="" class="logo flex">
                     <img src="Assets/img/Logo Icon 1.png" alt="">
                     <span>Enver</span>
                 </a>
             </div>
             <div class="mobile-menu navbar_items">
                 <ul class="flex">
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Our Project</a></li>
-                    <li><a href="">About us</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#project">Our Project</a></li>
+                    <li><a href="#contact">contact us</a></li>
                 </ul>
             </div>
             <div class="button">
@@ -53,9 +54,10 @@
     <!--================== MAIN SECTION DESIGN ======================= -->
 
     <main>
+
         <!--================== HERO SECTION DESIGN ======================= -->
 
-        <section class="hero">
+        <section class="hero flex" id="home">
             <div class="container grid hero_grid-content">
                 <div class="hero-content">
                     <h1 class="hero_title">
@@ -65,6 +67,9 @@
                     <button class="btn btn2 hero_btn">Our Services <i class='bx bx-right-arrow-alt'></i></button>
                 </div>
                 <div class="hero_img-content">
+                
+                    <!-- ***************** HERO SECTION VECTOR DESIGN ******************** -->
+
                     <div class="vector vector1">
                         <img src="Assets/img/Vector 13.png" alt="">
                     </div>
@@ -77,6 +82,9 @@
                     <div class="vector vector4">
                         <img src="Assets/img/add.png" alt="">
                     </div>
+
+                    <!-- ***************** HERO SECTION MAIN IMAGE DESIGN ******************** -->
+
                     <div class="hero-img">
                         <img src="Assets/img/Group162532.png" alt="" >
                     </div>
@@ -85,6 +93,7 @@
         </section>
 
         <!--================== ABOUT VIDEO SECTION DESIGN ======================= -->
+
         <section class="about">
             <div class="container">
                 <div class="grid about_grid" style="align-items: flex-start;">
@@ -105,12 +114,13 @@
             </div>
         </section>
 
-        <!--================== ABOUT VIDEO SECTION DESIGN ======================= -->
+        <!--================== SERVICE SECTION DESIGN ======================= -->
 
         <section id="service">
-            <div class="container">
+            <div class="container service_icons">
                 <div class="grid service_title-grid">
                     <h2 class="section_title">The Service We Provide For You</h2>
+                    
                 </div>
                 <div class="service-content grid">
                     <div class="service-card">
@@ -180,55 +190,144 @@
                         </div>
                     </div>
                 </div>
+
+            <!-- ***************** SERVICE SECTION VECTOR DESIGN ******************** -->
+                <div class="service_vector service_vector1">
+                    <img src="Assets/img/Group 162527.png" alt="">
+                </div>
+                <div class="service_vector service_vector2">
+                    <img src="Assets/img/add.png" alt="">
+                </div>
+                <div class="service_vector service_vector3">
+                    <img src="Assets/img/add.png" alt="">
+                </div>
             </div>
+            
         </section>
-    <!--================== IMPORT LOCAL JS FILES ======================= -->
-        <section id="portfolio">
-            <div class="container">
+
+        <!--================== PORTFOLIO OR PROJECT SECTION DESIGN ======================= -->
+
+        <section id="project">
+            <div class="container portfolio_icons">
                 <h2 class="section_title">
                     Our Awesome Portofolio
                 </h2>
-                <div class="swiper portfolio-content">
-                    <div class="swiper-wrapper ">
-                      <div class="swiper-slide">
-                          <div class="single-item">
-                              <img src="Assets/img/Group 162508.png" alt="">
-                          </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="single-item">
+                <div class="owl-carousel owl-theme slider_content">
+                    <div class="item">
+                        <div class="slider-img">
                             <img src="Assets/img/Group 162508.png" alt="">
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="single-item">
-                            <img src="Assets/img/Group 162508.png" alt="">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="single-item">
-                            <img src="Assets/img/Group 162508.png" alt="">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="single-item">
-                            <img src="Assets/img/Group 162508.png" alt="">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="single-item">
-                            <img src="Assets/img/Group 162508.png" alt="">
-                        </div>
-                      </div>
-                      <!-- <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div> -->
                     </div>
-                    <div class="swiper-pagination"></div>
-                  </div>
-                
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162509.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162510.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162508.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162509.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162510.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162508.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162509.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-img">
+                            <img src="Assets/img/Group 162510.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***************** PORFOLIO SECTION VECTOR DESIGN ******************** -->
+
+                <div class="portfolio_vector port_vector1">
+                    <img src="Assets/img/Group 162526.png" alt="">
+                </div>
+                <div class="portfolio_vector port_vector2">
+                    <img src="Assets/img/Vector 13.png" alt="">
+                </div>
+
             </div>
         </section>
+
+        <!--================== CONTACT SECTION DESIGN ======================= -->
+
+        <section id="contact">
+            <div class="container">
+                <div class="grid contact_grid">
+                    <div>
+                        <h2 class="section_title">Contact us for the service you want to use</h2>
+                    </div>
+                    <div style="justify-self: flex-end;">
+                        <button class="btn btn2">contact us</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ***************** CONTACT SECTION VECTOR DESIGN ******************** -->
+            
+            <div class="ctn_vector ctn_vector1">
+                <img src="Assets/img/add.png" alt="">
+            </div>
+            
+            <div class="ctn_vector ctn_vector2">
+                <img src="Assets/img/Group 162526.png" alt="">
+            </div>
+            
+        </section>
+
+    <!--================== FOOTER SECTION DESIGN ======================= -->
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer_contents">
+                <div class="footer-logo">
+                    <a href="" class="logo flex" style="column-gap: 4px;">
+                        <img src="Assets/img/Logo Icon 1.png" alt="">
+                        <span>Enver</span>
+                    </a>
+                </div>
+                <div class="footer-menu">
+                    <ul class="flex" style="column-gap: 20px;">
+                        <li>
+                            <a class="para" href="#">Support</a>
+                        </li>
+                        <li>
+                            <a class="para" href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="para" href="#">Terms and Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p class="para">© <span id="date">2020</span> Enver, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        </footer>
 
     </main>
 
@@ -244,8 +343,7 @@
     <script src="Assets/vendor/aos/aos.js"></script>
     <script src="Assets/vendor/jquery/jquery.slim.min.js"></script>
     <script src="Assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="Assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+    <script src="Assets/vendor/OwlCarousel/js/owl.carousel.min.js"></script>
     <!--================== IMPORT JS FILES ======================= -->
     <script src="Assets/js/main.js"></script>
 </body>

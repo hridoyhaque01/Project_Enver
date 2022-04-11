@@ -33,6 +33,8 @@ body{
     --clr : #fff;
     --para-clr : rgba(255, 255, 255, 0.7);
     --bg-clr : #19191B;
+    --cnt-bg: #1E1E20;
+    --slider-btn: #121213;
 }
 
 /*============================== COMMON WORK ======================== */
@@ -41,12 +43,14 @@ body{
 .container{
     width:90%;
     margin:0 auto;
+    overflow: hidden;
 }
 
 i{
     line-height: 0;
     display: inline-block;
 }
+
 .grid{
     display: grid;
 }
@@ -92,6 +96,7 @@ i{
     font-size: var(--logo-text);
     font-weight: 700;
     line-height: 140%;
+    color:#fff;
 }
 
 .hero_title{
@@ -132,17 +137,28 @@ section{
 }
 /*============================== END COMMON WORK ======================== */
 
-/*============================== DESIGN FOR NAVBAR ======================== */
+/*============================== DESIGN FOR NAVBAR STYLE ======================== */
 
 .navbar{
-    position: relative;
+    position: fixed;
+    top:0;
+    left:0;
     min-width: 100%;
     padding:34px 0;
+    z-index: 9999;
+    transition: .4s;
+
+}
+
+.navbar.show_navbar{
+    padding:20px 0;
+    background-color: #1e1e27;
+    box-shadow: 0px 7px 10px rgba(22, 24, 34, 0.7);
+    
 }
 
 .logo-part a{
    column-gap: 4px;
-   color:#fff;
 }
 
 .navbar_items ul{
@@ -156,6 +172,7 @@ section{
     text-transform: capitalize;
     transition: .3s;
 }
+
 .navbar_items ul li a:hover,
 .navbar_items ul li a.active{
     color:var(--nav-link-active);
@@ -170,7 +187,6 @@ section{
     background-color: var(--nav-link-active);
 }
 
-
 .menu_btn{
     position: fixed;
     top:38px;
@@ -178,46 +194,57 @@ section{
     display: none;
 }
 
-/*============================== DESIGN FOR NAVBAR ======================== */
+/*============================== HERO SECTION DESIGN STYLE ======================== */
+.hero{
+    height: 100vh;
+}
 
 .hero_grid-content{
     grid-template-columns: 1fr 1.2fr;
     align-items: center;
 }
+
 .hero_img-content{
     position: relative;
     text-align: center;
 }
+
 .hero_img-content .vector{
     position: absolute;
- 
 }
+
 .hero_img-content .vector1{
     top:0;
     left:90px;
 }
+
 .hero_img-content .vector2{
     right:170px;
     top:0;
 }
+
 .hero_img-content .vector3{
     bottom:0;
     left:0;
 }
+
 .hero_img-content .vector4{
     bottom:0;
     right:120px;
 }
+
 .hero_btn i{
     font-size: 20px;
     margin-left: 4px;
     transform: rotate(-18deg);
 }
+
 .hero_img-content .hero-img{
     text-align: center;
     position: relative;
     display: inline-block;
 }
+
 .hero-img::after{
     position: absolute;
     content: '';
@@ -231,33 +258,67 @@ section{
     z-index: -1;
 }
 
-/*============================== DESIGN FOR NAVBAR ======================== */
+/*============================== ABOUT SECTION DESIGN STYLE ======================== */
 
 .about_grid{
     grid-template-columns: 1fr 1fr;
 }
+
 .video-content{
     margin-top:50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .vid_bg-img{
     position: relative;
 }
+
 .vid_bg-img .play_btn{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
 }
-/*============================== DESIGN FOR NAVBAR ======================== */
+
+/*============================== SERVICE SECTION DESIGN STYLE ======================== */
 
 .service_title-grid{
     grid-template-columns: .4fr;
     justify-content: center;
     text-align: center;
 }
+
+.service_icons{
+    position: relative;
+}
+
+.service_icons .service_vector{
+    position: absolute;
+}
+
+.service_icons .service_vector1{
+    left:200px;
+    top:-10px;
+}
+
+.service_icons .service_vector2{
+    right:200px;
+    top:40px;
+}
+
+.service_icons .service_vector3{
+    left:0px;
+    bottom:-10px;
+}
+
+.service_icons .service_vector2 img,
+.service_icons .service_vector3 img
+{
+    transform: rotate(30deg);
+}
+
 .service-content{
     grid-template-columns: repeat(3,1fr);
     column-gap: 90px;
@@ -265,34 +326,109 @@ section{
     text-align: center;
     margin-top: 40px;
 }
+
 .service-card{
     padding:20px;
 }
+
 .service-card .service_title{
     margin:10px 0;
 }
-/*============================== DESIGN FOR NAVBAR ======================== */
-.slider-content{
-    margin-top: 30px;
+
+/*============================== PORFOLIO OR PROJECT SECTION DESIGN STYLE ======================== */
+
+.portfolio_icons{
+    position: relative;
 }
-/* .portfolio-content{
-    padding:5px 120px;
-    height: 270px;
+
+.portfolio_icons .portfolio_vector{
+    position: absolute;
+}
+
+.portfolio_icons .port_vector1{
+    top:10px;
+    right:120px;
+}
+
+.portfolio_icons .port_vector2{
+    bottom:40px;
+    left:20px;
+}
+
+.slider_content{
+    margin:50px;
+}
+
+.owl-theme .owl-nav{
+    display: none;
+}
+
+.owl-theme .owl-dots{
+    margin-top: 40px;
+}
+
+.owl-dots .owl-dot span{
+    width: 7px !important;
+    height: 7px !important;
+    background-color: var(--slider-btn) !important;
+    transition: .3s !important;
+    margin:5px 3px !important;
+}
+
+.owl-dots .owl-dot.active span{
+    width:18px !important;
+    background-color: var(--nav-link-active) !important;
+}
+
+/*============================== CONTACT SECTION DESIGN STYLE ======================== */
+
+#contact{
+    height: 335px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cnt-bg);
+    position: relative;
+}
+
+.contact_grid{
+    grid-template-columns:repeat(2,1fr);
+    column-gap: 40px;
+    align-items: center;
+}
+
+#contact .ctn_vector{
+    position: absolute;
+}
+
+#contact .ctn_vector1{
+    top:30px;
+    right:30px;
+} 
+
+#contact .ctn_vector2{
+    left:100px;
+    bottom:30px;
+}
+
+/*============================== FOOTER SECTION DESIGN STYLE ======================== */
+
+.footer{
+    padding:40px 0;
+}
+
+.footer_contents{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.single-item.start{
-    align-self: flex-start;
+
+.footer-menu ul li a,
+.copyright p{
+    font-size: var(--small-text);
+    transition: .3s;
 }
-.single-item.center{
-    align-self: center;
-}
-.single-item.baseline{
-    align-self: flex-end;
-} */
-.swiper-slide{
-    text-align: center;
-    /* padding:10px 30px;
-    display: flex;
-    justify-content: center; */
+
+.footer-menu ul li a:hover{
+    color:var(--nav-link-active);
 }
