@@ -134,9 +134,8 @@ i{
 }
 
 section{
-    padding: 80px 0;
+    padding: 40px 0;
     overflow: hidden;
-    background-color: #5454D4;
 }
 
 @media screen and (max-width:991px) {
@@ -265,34 +264,35 @@ section{
     grid-template-columns: 1fr 1.2fr;
     align-items: center;
 }
-
 .hero_img-content{
-    position: relative;
     text-align: center;
 }
+.hero_img-content .hero-img{
+    position: relative;
+}
 
-.hero_img-content .vector{
+.hero-img .vector{
     position: absolute;
 }
 
-.hero_img-content .vector1{
+.hero-img .vector1{
     top:0;
-    left:90px;
+    left:10px;
 }
 
-.hero_img-content .vector2{
-    right:170px;
+.hero-img .vector2{
+    right:30px;
     top:0;
 }
 
-.hero_img-content .vector3{
+.hero-img .vector3{
     bottom:0;
-    left:0;
+    left:-25px;
 }
 
-.hero_img-content .vector4{
+.hero-img .vector4{
     bottom:0;
-    right:120px;
+    right:15px;
 }
 
 .hero_btn i{
@@ -323,7 +323,12 @@ section{
 /*============================== ABOUT SECTION DESIGN STYLE ======================== */
 
 .about_grid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .4fr .4fr;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.about_grid p{
 }
 
 .video-content{
@@ -502,7 +507,7 @@ section{
 
 @media screen and (max-width : 1200px) {
 
-    .hero_img-content .vector2{
+    /* .hero_img-content .vector2{
         right:60px;
         top:0;
     }
@@ -510,11 +515,14 @@ section{
     .hero_img-content .vector4{
         bottom:0;
         right:30px;
-    }
+    } */
 
 }
 
 @media screen and (max-width : 991px) {
+    .service_title-grid{
+        grid-template-columns: .5fr;
+    }
     .service_icons .service_vector1{
         left:100px;
         top:-40px;
@@ -524,6 +532,7 @@ section{
         right:100px;
         top:80px;
     }
+    
 }
 
 @media screen and (max-width : 767px) {
@@ -540,12 +549,20 @@ section{
     }
 
     .about_grid{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1,.6fr);
         row-gap: 20px;
     }
     
     .service-content{
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .service_icons .service_vector1{
+        left:40px;
+    }
+    
+    .service_icons .service_vector2{
+        right:60px;
     }
     .footer_contents{
         grid-template-columns:repeat(2,1fr);
@@ -568,19 +585,47 @@ section{
         height: 49%;
         width:45%;
     }
-    .hero_img-content .vector1{
-        left:20px;
-        top:0;
+    .hero-img .vector3{
+        bottom:0;
+        left:-20px;
+    }
+    .service_title-grid{
+        grid-template-columns: .6fr;
+        justify-content: start;
+    }
+    #service .section_title{
+        text-align: left !important;
+        padding:25px 0;
     }
     .service_icons .service_vector1{
-        left:30px;
+        top:-50px;
+        left:0;
     }
-    
     .service_icons .service_vector2{
-        right:30px;
+        top:100px;
     }
     .service-content{
         grid-template-columns: repeat(1,1fr);
+    }
+    .portfolio_icons .port_vector1 {
+        top: 38px;
+        right: 30px;
+    }
+   .owl-theme .item .slider-img{
+       text-align: center;
+   }
+    .slider-img img{
+        width:60% !important;
+        display: inline-block !important;
+    }
+    .contact_grid {
+        grid-template-columns: repeat(1,1fr);
+        justify-content: start;
+        row-gap: 30px;
+    }
+    #contact .ctn_vector2 {
+        left: 65px;
+        bottom: 10px;
     }
     .footer_contents{
         grid-template-columns:repeat(1,1fr);
@@ -592,12 +637,11 @@ section{
     .footer_contents .copyright{
         grid-column: span 1;
     }
+
     
 }
 @media screen and (max-width : 380px) {
-    .section_title{
-        font-size: 22px;
-    }
+    
     .footer-menu ul{
         display: inline-block;
     }
@@ -606,8 +650,14 @@ section{
         text-align: center;
     }
     .mobile-menu ul{
-
         margin:60px 30px;
+    }
+    .about_grid{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 20px;
+    }
+    .service_title-grid{
+        grid-template-columns: 1fr;
     }
 }
 

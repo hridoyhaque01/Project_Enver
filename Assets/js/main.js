@@ -24,7 +24,7 @@
 
     sections.forEach(current =>{
       const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 90,
+            sectionTop = current.offsetTop - 100,
             sectionId = current.getAttribute('id')
       
       if(scrollY > sectionTop && scrollY < sectionTop + sectionHeight){
@@ -77,6 +77,10 @@
               items:1,
               nav:true
           },
+          575:{
+            items:2,
+            nav:false
+        },
           767:{
               items:3,
               nav:false
