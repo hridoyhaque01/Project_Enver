@@ -136,6 +136,7 @@ i{
 section{
     padding: 80px 0;
     overflow: hidden;
+    background-color: #5454D4;
 }
 
 @media screen and (max-width:991px) {
@@ -402,6 +403,7 @@ section{
 
 .portfolio_icons{
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio_icons .portfolio_vector{
@@ -419,7 +421,7 @@ section{
 }
 
 .slider_content{
-    margin:50px;
+    margin:50px 0;
 }
 
 .owl-theme .owl-nav{
@@ -481,9 +483,8 @@ section{
 }
 
 .footer_contents{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
 }
 
 .footer-menu ul li a,
@@ -547,16 +548,10 @@ section{
         grid-template-columns: repeat(2,1fr);
     }
     .footer_contents{
-        display: grid;
         grid-template-columns:repeat(2,1fr);
         row-gap: 20px;
     }
-    .footer_contents .footer-logo{
-        justify-self: left;
-    }
-    .footer_contents .footer-menu{
-        justify-self: right;
-    }
+    
     .footer_contents .copyright{
         justify-self: center;
         grid-column: span 2;
@@ -588,15 +583,31 @@ section{
         grid-template-columns: repeat(1,1fr);
     }
     .footer_contents{
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns:repeat(1,1fr);
         row-gap: 20px;
+    }
+    .footer-logo{
+        text-align: center !important;
+    }
+    .footer_contents .copyright{
+        grid-column: span 1;
     }
     
 }
 @media screen and (max-width : 380px) {
     .section_title{
         font-size: 22px;
+    }
+    .footer-menu ul{
+        display: inline-block;
+    }
+    .footer-menu{
+        justify-self: center;
+        text-align: center;
+    }
+    .mobile-menu ul{
+
+        margin:60px 30px;
     }
 }
 
