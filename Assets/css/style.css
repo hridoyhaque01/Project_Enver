@@ -643,6 +643,10 @@ section{
         row-gap: 30px;
     }
 
+    .contact_grid .cnt_btn{
+        justify-self: start !important;
+    }
+
     #contact .ctn_vector2 {
         left: 65px;
         bottom: 10px;
