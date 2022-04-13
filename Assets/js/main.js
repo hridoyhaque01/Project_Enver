@@ -1,7 +1,9 @@
 
+"use strict"
 
   /*========================== SHOW NAVBAR WHEN IT'S SCROLL ==============================*/
-    const navbar = document.querySelector('.navbar')
+    
+  const navbar = document.querySelector('.navbar')
     function showNav(){
       let scrollY = window.scrollY
       if(scrollY > 60){
@@ -40,6 +42,7 @@
   window.addEventListener('scroll', autoActive)
 
   /*===================> SHOW NAVBAR IN MOBILE DEVICE ========================*/
+  
   const navbar_menu = document.querySelector('.navbar_items'),
         showBtn = document.querySelector('.menu_btn'),
         closeBtn = document.querySelector('.close_menu'),
